@@ -1,25 +1,38 @@
-\section{Habits of a Christian}
-\noindent
-\blindtext
-\\
+\documentclass{article}
+\usepackage{blindtext}
 
-\subsection{Daily Bread}
-\noindent
-\blindtext
-\\
+\usepackage{anyfontsize}
+\usepackage{bibletext}
+\usepackage{endnotes}
+\usepackage[letterpaper, margin=.5in]{geometry}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{xcolor}
 
-\subsection{Without Ceasing}
-\noindent
-\blindtext
-\\
+\hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue}
+\titleformat{\section}{\fontsize{28}{28}\selectfont\bfseries}{Chapter \thesection}{1em}{}
+\titleformat{\subsection}{\fontsize{18}{18}\selectfont\bfseries}{}{0em}{}
+\titleformat{\subsubsection}{\fontsize{14}{14}\selectfont\bfseries}{}{0em}{}
 
-\subsection{Cheerful Giving}
-\noindent
-\blindtext
-\\
+%\newcommand{\citeverse}[2]{#1\footnote{\bibletext[ref=false]{#2}}}
+\newcommand{\citeverse}[2]{#1\footnote{#1 | \bibletext[ref=false]{#2}}}
+%\newcommand{\citeverse}[2]{#1 \endnote{#1: \bibletext[ref=false]{#2}}}
+\renewcommand{\t}{\indent}
 
-\subsection{Go Ye Therefore}
-\noindent
-\blindtext
-\\
+\def\enotesize{\normalsize}
 
+\title{Living For God}
+\author{Joshua Bays}
+\date{}
+
+\begin{document}\fontsize{12}{12}\selectfont
+\maketitle
+\tableofcontents
+\newpage
+
+\include{introduction.tex}
+\include{personal-relationship/main.tex}
+\include{habits-of-a-christian/main.tex}
+\include{outward-presentation/main.tex}
+
+\end{document}
